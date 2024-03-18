@@ -1,0 +1,76 @@
+{
+  "category": [
+    {
+      "name": "CompanyDetails",
+      "code": "CD",
+      "creation_date":"2024-03-01T13:11:02.62",
+      "type": "tile",
+      "img": "assets/images/tileone.jpg",
+      "urltype": "pdf",
+      "url": "CompanyDetails.pdf"
+    },
+    {
+      "name": "HR Policies",
+      "code": "HRP",
+      "creation_date":"2024-03-01T13:11:02.62",
+      "type": "tile",
+    "img": "assets/images/tiletwo.jpg",
+      "value": [
+        {
+          "name": "Leave Policies",
+          "code": "LP",
+          "creation_date":"2024-03-01T13:11:02.62",
+          "type": "folder",
+         "img": "assets/images/tileone.jpg",
+          "value": [
+            {
+              "name": "SickLeave",
+              "code": "SL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "SickLeave.png",
+              "urltype": "pdf",
+              "url": "SickLeave.pdf"
+            },
+            {
+              "name": "CasualLeave",
+              "code": "CL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "CasualLeave.png",
+              "urltype": "pdf",
+              "url": "CasualLeave.pdf"
+            },
+            {
+              "name": "EarnedLeave",
+              "code": "EL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "EarnedLeave.png",
+              "urltype": "pdf",
+              "url": "EarnedLeave.pdf"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RatesCalculation",
+      "code": "RC",
+      "creation_date":"2024-03-01T13:11:02.62",
+      "type": "tile",
+       "img": "assets/images/tilethree.jpg",
+      "urltype": "form",
+      "url": "RatesCalculation.form"
+    },
+    {
+      "name": "EnquiryForm",
+      "code": "EF",
+      "creation_date":"2024-03-01T13:11:02.62",
+      "type": "tile",
+      "img": "assets/images/tilefour.jpg",
+      "urltype": "form",
+      "url": "EnquiryForm.form"
+    }
+  ]
+}
