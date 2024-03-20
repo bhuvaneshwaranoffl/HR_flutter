@@ -1,6 +1,5 @@
 import 'package:assessment/model/catergoryModel.dart';
 import 'package:assessment/provider/jsonProvider.dart';
-import 'package:assessment/screens/HR%20Policy/leave%20policy/leavePolicy.dart';
 import 'package:assessment/utils/constant.dart';
 import 'package:assessment/widget/reusabletile.dart';
 import 'package:flutter/material.dart';
@@ -50,14 +49,7 @@ class _HRPolicyState extends State<HRPolicy> {
                   image: AssetImage(subCategories[index].img),
                   text:subCategories[index].name,
                   press: () {
-                    if (subCategories[index].name=='Leave Policies') {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>  LeavePolicy(
-                                    nestedDataList: subCategories[index].value ?? [], categoryIndex: 1,
-                                  )));
-                    }
+                   
                   }),
             );
           }),
