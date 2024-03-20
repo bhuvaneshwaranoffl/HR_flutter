@@ -19,10 +19,16 @@ class HRPolicy extends StatefulWidget {
 }
 
 class _HRPolicyState extends State<HRPolicy> {
+    void initState() {
+    final getData = Provider.of<CategoryProvider>(context, listen: false);
+    getData.fetchCategories();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
-    var categoryProvider = Provider.of<CategoryProvider>(context);
-    var subCategories = categoryProvider.fetchSubCategories(1);
+     final getData = Provider.of<CategoryProvider>(context, listen: true);
+    final category = getData.categories[widget.categoryIndex];
+   final List<SubCategory> subCategories = category.value ?? [];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: scaffoldBackground,
@@ -36,10 +42,10 @@ class _HRPolicyState extends State<HRPolicy> {
         centerTitle: true,
       ),
       body: ListView.builder(
-          itemCount: subCategories.length,
+          itemCount:subCategories.length,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
               child: Reusabletile(
                   image: AssetImage(subCategories[index].img),
                   text:subCategories[index].name,
@@ -48,7 +54,9 @@ class _HRPolicyState extends State<HRPolicy> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LeavePolicy()));
+                              builder: (context) =>  LeavePolicy(
+                                    nestedDataList: subCategories[index].value ?? [], categoryIndex: 1,
+                                  )));
                     }
                   }),
             );

@@ -18,10 +18,13 @@ class Reusabletile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     final Orientation orientation = MediaQuery.of(context).orientation;
+
+     double containerHeight = orientation == Orientation.portrait ? 80.h : 100.h;
     return GestureDetector(
       onTap:press,
       child: Container(
-        height: 80.h,
+        height: containerHeight,
         decoration: BoxDecoration(
             image: DecorationImage(
               image:image,

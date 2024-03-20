@@ -1,12 +1,11 @@
+
+
 import 'package:assessment/provider/jsonProvider.dart';
-import 'package:assessment/screens/HR%20Policy/hrPolicy.dart';
-import 'package:assessment/screens/RatesCalculation/ratesCalci.dart';
-import 'package:assessment/screens/companydetails/campanyDetails.dart';
-import 'package:assessment/screens/enquiry%20form/form.dart';
 import 'package:assessment/utils/constant.dart';
 import 'package:assessment/widget/reusabletile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     final getData = Provider.of<CategoryProvider>(context, listen: false);
-    getData.readJson();
+    getData.fetchCategories();
     super.initState();
   }
 
@@ -55,6 +54,7 @@ class _HomePageState extends State<HomePage> {
                 )),
             Expanded(
               child: ListView.builder(
+                shrinkWrap: true,
                   itemCount: getData.categories.length,
                   itemBuilder: (context, index) {
                     return Padding(
@@ -65,33 +65,21 @@ class _HomePageState extends State<HomePage> {
                         image: AssetImage(getData.categories[index].img),
                         press: () {
                           if (getData.categories[index].name ==
-                              'CompanyDetails') {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CompanyDetails()));
+                              getData.categories[0].name) {
+                            context.pushNamed("/companyDetails");
                           }
                           if (getData.categories[index].name ==
-                              'HR Policies') {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const HRPolicy(categoryIndex: 1,)));
+                               getData.categories[1].name) {
+                          context.pushNamed("/hrPolicies");
                           }
                           if (getData.categories[index].name ==
-                              'RatesCalculation') {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const RatesCalculation()));
+                              getData.categories[2].name) {
+                           context.pushNamed("/ratesCalci");
                           }
                           if (getData.categories[index].name ==
-                              'EnquiryForm') {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const EnquiryForm()));
-                          }
+                              getData.categories[3].name) {
+                           context.pushNamed("/form");
+                           }
                         },
                       ),
                     );
