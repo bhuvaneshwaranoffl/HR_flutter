@@ -18,8 +18,7 @@ class _CompanyDetailsState extends State<CompanyDetails> {
     final getData = Provider.of<CategoryProvider>(context, listen: false);
     getData.fetchCategories();
     super.initState();
-  }
-  String pdfPath = 'assets/pdf/proposal.pdf'; // Path to your PDF file
+  } // Path to your PDF file
 
   @override
   Widget build(BuildContext context) {

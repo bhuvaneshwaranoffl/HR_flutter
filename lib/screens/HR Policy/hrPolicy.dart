@@ -1,3 +1,4 @@
+import 'package:assessment/controller/ChildBottomBar/detailed_page_bottom.dart';
 import 'package:assessment/model/catergoryModel.dart';
 import 'package:assessment/provider/jsonProvider.dart';
 import 'package:assessment/screens/DetailedPage/detailed_page.dart';
@@ -48,9 +49,13 @@ class _HRPolicyState extends State<HRPolicy> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => DetailedHrPolicies(
-                                subCategory: subCategories[index],
-                                category: category, categoryIndex: 1,)));
+                            builder: (context) => 
+                           BottomDetailedHrBar(categoryIndex: 1,
+                            subCategoryIndex: index)
+                                // DetailedHrPolicies(
+                                // subCategory: subCategories[index],
+                                // category: category, categoryIndex: 1,)
+                                ));
                   }),
             );
           }),

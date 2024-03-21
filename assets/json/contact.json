@@ -29,6 +29,12 @@
       "designation": "Sales Representative",
       "mobile": "3210987654",
       "email": "david.wilson@example.com"
+    },
+      {
+      "name": "Lucifer",
+      "designation": "CEO",
+      "mobile": "3210987654",
+      "email": "Lucifer.wilson@example.com"
     }
   ]
 }

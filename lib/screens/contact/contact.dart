@@ -47,49 +47,54 @@ class _ContactState extends State<Contact> {
                 return Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
-                  child: Container(
-                    height: 80.h,
-                    decoration: BoxDecoration(
-                        color: tilethreeColor,
-                        borderRadius: BorderRadius.circular(10.r)),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 6.5.h,),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            radius: 30,
-                            foregroundColor: Colors.amber[50],
-                          ),
-                          SizedBox(
-                            width: 20.w,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                contact.name,
-                                style: const TextStyle(
-                                  fontSize: 17,
+                  child: GestureDetector(
+                    onTap: (){
+                      
+                    },
+                    child: Container(
+                      height: 80.h,
+                      decoration: BoxDecoration(
+                          color: tilethreeColor,
+                          borderRadius: BorderRadius.circular(10.r)),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.w,vertical: 6.5.h,),
+                        child: Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 30,
+                              foregroundColor: Colors.amber[50],
+                            ),
+                            SizedBox(
+                              width: 20.w,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  contact.name,
+                                  style: const TextStyle(
+                                    fontSize: 17,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                contact.designation,
-                                style: TextStyle(
-                                    fontSize: 14, color: Colors.grey[350]),
-                              ),
-                              Text(
-                                contact.mobile,
-                                style: TextStyle(
-                                    fontSize: 14, color: Colors.grey[350]),
-                              ),
-                              Text(
-                                contact.email,
-                                style: TextStyle(
-                                    fontSize: 14, color: Colors.grey[350]),
-                              ),
-                            ],
-                          )
-                        ],
+                                Text(
+                                  contact.designation,
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.grey[350]),
+                                ),
+                                Text(
+                                  contact.mobile,
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.grey[350]),
+                                ),
+                                Text(
+                                  contact.email,
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.grey[350]),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ),
