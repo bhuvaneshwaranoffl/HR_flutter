@@ -20,6 +20,5 @@ class _DetailedPdfPageState extends State<DetailedPdfPage> {
           title:  Text("${widget.nestedData.name}"),
         ),
         body: SfPdfViewer.asset("${widget.nestedData.url}"));
-
   }
 }

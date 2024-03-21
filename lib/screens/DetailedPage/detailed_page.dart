@@ -1,12 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:assessment/model/catergoryModel.dart';
-import 'package:assessment/provider/jsonProvider.dart';
 import 'package:assessment/screens/DetailedPage/pdf_detailed_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:assessment/utils/constant.dart';
 import 'package:assessment/widget/reusabletile.dart';
-import 'package:provider/provider.dart';
 
 class DetailedHrPolicies extends StatefulWidget {
   final int categoryIndex;
