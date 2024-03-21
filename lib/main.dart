@@ -1,6 +1,9 @@
 import 'package:assessment/controller/MainBottomBar/home_bottom.dart';
 import 'package:assessment/controller/MainBottomBar/hrpolicies_bottom.dart';
+import 'package:assessment/model/catergoryModel.dart';
 import 'package:assessment/provider/jsonProvider.dart';
+import 'package:assessment/screens/DetailedPage/detailed_page.dart';
+import 'package:assessment/screens/DetailedPage/pdf_detailed_page.dart';
 import 'package:assessment/screens/RatesCalculation/ratesCalci.dart';
 import 'package:assessment/screens/companydetails/campanyDetails.dart';
 import 'package:assessment/screens/enquiry%20form/form.dart';
@@ -23,6 +26,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+     
+    
     return ScreenUtilInit(
         designSize: const Size(360, 640),
         child: MultiProvider(
@@ -74,5 +79,6 @@ final GoRouter _router = GoRouter(initialLocation: "/home", routes: <RouteBase>[
       builder: (context, state) {
         return const EnquiryForm();
       }),
+       
   
 ]);

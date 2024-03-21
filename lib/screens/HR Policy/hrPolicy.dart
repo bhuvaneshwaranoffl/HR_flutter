@@ -1,9 +1,11 @@
 import 'package:assessment/model/catergoryModel.dart';
 import 'package:assessment/provider/jsonProvider.dart';
+import 'package:assessment/screens/DetailedPage/detailed_page.dart';
 import 'package:assessment/utils/constant.dart';
 import 'package:assessment/widget/reusabletile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 class HRPolicy extends StatefulWidget {
@@ -18,16 +20,11 @@ class HRPolicy extends StatefulWidget {
 }
 
 class _HRPolicyState extends State<HRPolicy> {
-    void initState() {
-    final getData = Provider.of<CategoryProvider>(context, listen: false);
-    getData.fetchCategories();
-    super.initState();
-  }
   @override
   Widget build(BuildContext context) {
-     final getData = Provider.of<CategoryProvider>(context, listen: true);
+    final getData = Provider.of<CategoryProvider>(context, listen: true);
     final category = getData.categories[widget.categoryIndex];
-   final List<SubCategory> subCategories = category.value ?? [];
+    final List<SubCategory> subCategories = category.value ?? [];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: scaffoldBackground,
@@ -41,15 +38,20 @@ class _HRPolicyState extends State<HRPolicy> {
         centerTitle: true,
       ),
       body: ListView.builder(
-          itemCount:subCategories.length,
+          itemCount: subCategories.length,
           itemBuilder: (context, index) {
             return Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
               child: Reusabletile(
                   image: AssetImage(subCategories[index].img),
-                  text:subCategories[index].name,
+                  text: subCategories[index].name,
                   press: () {
-                   
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailedHrPolicies(
+                                subCategory: subCategories[index],
+                                category: category, categoryIndex: 1,)));
                   }),
             );
           }),

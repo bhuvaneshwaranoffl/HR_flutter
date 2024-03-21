@@ -28,7 +28,7 @@
               "code": "SL",
               "creation_date":"2024-03-01T13:11:02.62",
               "type": "file",
-              "img": "assets/images/2148944835.jpg",
+               "img": "assets/images/tilethree.jpg",
               "urltype": "pdf",
               "url": "assets/pdf/androiddeployment.pdf"
             },
@@ -50,6 +50,120 @@
               "img": "assets/images/2148944835.jpg",
               "urltype": "pdf",
              "url": "assets/pdf/sample.pdf"
+            }
+          ]
+         
+        },
+         {
+          "name": "Service Policies",
+          "code": "LP",
+          "creation_date":"2024-03-01T13:11:02.62",
+          "type": "folder",
+         "img": "assets/images/2148944835.jpg",
+          "value": [
+            {
+              "name": "Pay service",
+              "code": "SL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/androiddeployment.pdf"
+            },
+            {
+              "name": "DataService",
+              "code": "CL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/proposal.pdf",
+              "route":"/casual"
+            },
+            {
+              "name": "EarnedService",
+              "code": "EL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+             "url": "assets/pdf/sample.pdf"
+            }
+          ]
+         
+        },
+         {
+          "name": "Income Policies",
+          "code": "LP",
+          "creation_date":"2024-03-01T13:11:02.62",
+          "type": "folder",
+         "img": "assets/images/121481.jpg",
+          "value": [
+            {
+              "name": "Monthly income",
+              "code": "SL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/androiddeployment.pdf"
+            },
+            {
+              "name": "Weekly Income",
+              "code": "CL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/proposal.pdf",
+              "route":"/casual"
+            },
+            {
+              "name": "Annual Income",
+              "code": "EL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+             "url": "assets/pdf/sample.pdf"
+            }
+          ]
+         
+        },
+         {
+          "name": "Leave Policies",
+          "code": "LP",
+          "creation_date":"2024-03-01T13:11:02.62",
+          "type": "folder",
+         "img": "assets/images/121481.jpg",
+          "value": [
+            {
+              "name": "SickLeave",
+              "code": "SL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+               "img": "assets/images/tilethree.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/androiddeployment.pdf"
+            },
+            {
+              "name": "CasualLeave",
+              "code": "CL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+              "url": "assets/pdf/androiddeployment.pdf"
+              
+            },
+            {
+              "name": "EarnedLeave",
+              "code": "EL",
+              "creation_date":"2024-03-01T13:11:02.62",
+              "type": "file",
+              "img": "assets/images/2148944835.jpg",
+              "urltype": "pdf",
+             "url": "assets/pdf/androiddeployment.pdf"
             }
           ]
          
